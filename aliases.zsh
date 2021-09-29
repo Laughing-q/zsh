@@ -11,3 +11,6 @@ alias ta="tmux attach -t"
 alias td="tmux detach"
 alias ts="tmux switch -t"
 alias tre="tmux rename-session -t"
+
+# lazygit
+alias lg="lazygit"
