@@ -14,3 +14,6 @@ alias tre="tmux rename-session -t"
 
 # lazygit
 alias lg="lazygit"
+
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"

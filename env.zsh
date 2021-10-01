@@ -1,12 +1,15 @@
 export EDITOR=nvim
 export BROWSER=google-chrome-stable
-# 
+export TERMINAL="st"
+
+export XDG_CONFIG_HOME="$HOME/.config" 
+export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
+
 # export PATH="/home/laughing/anaconda3/bin:$PATH"
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/laughing/TensorRT-7.1.3.4/lib
 
 # source /opt/anaconda/bin/activate root
 eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
-# xmodmap ~/.config/zsh/.xmodmap  # write to ~/.xinitrc
 # 
 # export GOROOT=/usr/lib/go
 # export GOPATH=~/workspace/go
