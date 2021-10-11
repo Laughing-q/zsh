@@ -1,6 +1,7 @@
 alias nv="nvim"
 alias ra="ranger"
-alias f="lf"
+alias f="lfimg"
+# alias f="lf"
 alias p="pwd"
 alias nf="neofetch"
 
