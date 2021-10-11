@@ -9,7 +9,7 @@ eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
 xmodmap ~/.config/zsh/.xmodmap
 
 # proxy
-export ALL_PROXY=socks5://127.0.0.1:7890
+# export ALL_PROXY=socks5://127.0.0.1:7890
 # export http_proxy=http://127.0.0.1:7890
 # export https_proxy=https://127.0.0.1:7890
 export LF_ICONS="\
