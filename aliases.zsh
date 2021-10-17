@@ -3,6 +3,7 @@ alias ra="ranger"
 # alias f="lf"
 alias f="lfimg"
 alias p="pwd"
+alias c="clear"
 alias nf="neofetch"
 
 # tmux alias
