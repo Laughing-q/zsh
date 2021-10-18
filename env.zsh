@@ -1,6 +1,9 @@
 export EDITOR=nvim
 export BROWSER=google-chrome
 
+export XDG_CONFIG_HOME="$HOME/.config" 
+export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
+
 export PATH="/home/laughing/anaconda3/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/laughing/TensorRT-7.1.3.4/lib
