@@ -23,6 +23,8 @@ alias \
   yl="youtube-dl -ic --proxy 127.0.0.1:7890" \
   ylx="youtube-dl -xic --proxy 127.0.0.1:7890"
 
+# curl
+alias curl="curl --proxy 127.0.0.1:7890"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
