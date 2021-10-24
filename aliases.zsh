@@ -20,8 +20,9 @@ alias lg="lazygit"
 
 # youtobe-dl
 alias \
-  yl="youtube-dl -ic --proxy 127.0.0.1:7890" \
+  yl="youtube-dl -ic --add-metadata --proxy 127.0.0.1:7890" \
   ylx="youtube-dl -xic --audio-format mp3 --proxy 127.0.0.1:7890"
+  # ylx="youtube-dl -xic --audio-format mp3 --add-metadata --proxy 127.0.0.1:7890"
 
 # curl
 alias curl="curl --proxy 127.0.0.1:7890"
