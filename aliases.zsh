@@ -17,3 +17,6 @@ alias tre="tmux rename-session -t"
 
 # lazygit
 alias lg="lazygit"
+
+# watch gpu
+alias wa="watch -n 1 nvidia-smi"
