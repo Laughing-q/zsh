@@ -29,3 +29,6 @@ alias curl="curl --proxy 127.0.0.1:7890"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# watch gpu
+alias wa="watch -n 1 nvidia-smi"
