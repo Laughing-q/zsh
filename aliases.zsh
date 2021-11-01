@@ -16,7 +16,7 @@ alias ts="tmux switch -t"
 alias tre="tmux rename-session -t"
 
 # lazygit
-alias lg="lazygit"
+alias gg="lazygit"
 
 # youtobe-dl
 alias \
