@@ -107,6 +107,9 @@ ex=🎯:\
 *.java=♨:\
 *.py=🍀:\
 *.lua=🌸:\
+*.h=🌲:\
+*.c=☘️:\
+*.cpp=☘️:\
 "
 
 # export LF_COLORS="\
