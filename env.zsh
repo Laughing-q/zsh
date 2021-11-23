@@ -6,6 +6,12 @@ export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 
 export PATH="/home/laughing/anaconda3/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+
+# ---------------cuda------------------
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+export PATH=$PATH:/usr/local/cuda/bin
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+ 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/laughing/TensorRT-7.1.3.4/lib
 
 source /home/laughing/anaconda3/bin/activate root
