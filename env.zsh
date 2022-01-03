@@ -1,6 +1,7 @@
 export EDITOR=nvim
 export BROWSER=google-chrome-stable
 export TERMINAL="st"
+export ZDOTDIR="$HOME/.config/zsh"
 
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
@@ -110,6 +111,7 @@ ex=🎯:\
 *.h=🌲:\
 *.c=☘️:\
 *.cpp=☘️:\
+*.zsh=⚙️:\
 "
 
 # export LF_COLORS="\
