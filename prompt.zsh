@@ -1,6 +1,6 @@
 #!/bin/sh
 
-## autoload vcs and colors
+# autoload vcs and colors
 autoload -Uz vcs_info
 autoload -U colors && colors
 

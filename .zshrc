@@ -1,5 +1,6 @@
 autoload -U colors && colors	# Load colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
@@ -29,6 +30,7 @@ zsh_add_file "prompt.zsh"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+# zsh_add_plugin "leophys/zsh-plugin-fzf-finder"
 
 
 # Change cursor shape for different vi modes.
