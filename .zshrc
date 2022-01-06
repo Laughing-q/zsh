@@ -16,22 +16,32 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-# bindkey '^l' edit-command-line
+# case insensitive (all), partial-word and substring completion
+if [[ "$CASE_SENSITIVE" = true ]]; then
+  zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
+else
+  if [[ "$HYPHEN_INSENSITIVE" = true ]]; then
+    zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+  else
+    zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+  fi
+fi
+unset CASE_SENSITIVE HYPHEN_INSENSITIVE
 
 # Useful Functions
 source "$ZDOTDIR/functions.zsh"
 
 # Normal files to source
 zsh_add_file "aliases.zsh"
-zsh_add_file "vi.zsh"
+zsh_add_file "keybindings.zsh"
 zsh_add_file "prompt.zsh"
+
+# fzf, install first.
+zsh_add_file "fzf/key-bindings.zsh"
+zsh_add_file "fzf/completion.zsh"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-# zsh_add_plugin "leophys/zsh-plugin-fzf-finder"
-
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select () {
@@ -47,6 +57,6 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-bindkey "^E" end-of-line
-# bindkey "^p" up-line-or-beginning-search # Up
-# bindkey "^n" down-line-or-beginning-search # Down
+source /opt/anaconda/bin/activate root
+# autojump, install first.
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
