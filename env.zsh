@@ -12,7 +12,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 export PATH=$PATH:/usr/local/cuda/bin
 export CUDA_HOME=/usr/local/cuda
  
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/laughing/TensorRT-7.1.3.4/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/d/cuda10.2/TensorRT-8.2.1.8/lib
 
 source /home/laughing/anaconda3/bin/activate root
 eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
