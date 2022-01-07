@@ -110,6 +110,16 @@ zle     -N   fzf-history-widget
   'unset' '__fzf_key_bindings_options'
 }
 
+# need autojump
+fj(){
+  local dir
+  dir=$(awk '{print $2}' "$HOME/.local/share/autojump/autojump.txt" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  BUFFER="cd -- ${(q)dir}"
+  zle accept-line
+}
+zle     -N   fj
+
 bindkey '^T' fzf-file-widget 
 bindkey '^R' fzf-history-widget
-bindkey '^F' fzf-cd-widget
+# bindkey '^F' fzf-cd-widget
+bindkey '^F' fj
