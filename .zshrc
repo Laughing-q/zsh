@@ -41,6 +41,7 @@
  zsh_add_file "fzf/custom.zsh"
  zsh_add_file "fzf/key-bindings.zsh"
  zsh_add_file "fzf/completion.zsh"
+ # zsh_add_file "fzf/functions.zsh"
 
  zsh_add_plugin "zsh-users/zsh-autosuggestions"
  zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
@@ -61,3 +62,10 @@
 
  # autojump, install first.
  [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+d() {
+  IFS=$'\n'
+  dirs=($(fd . --type d "${@:2}" | fzf -0 -1 -m))
+  IFS=$' '
+  [[ -n "$dirs" ]] && $1 "${dirs[@]}"
+}
