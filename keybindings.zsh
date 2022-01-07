@@ -12,8 +12,6 @@ bindkey -M vicmd "L" vi-end-of-line
 bindkey -M vicmd "k" down-line-or-history
 bindkey -M vicmd "i" up-line-or-history
 
-VI_MODE_SET_CURSOR=true
-
 # base
 bindkey "^E" end-of-line
 # bindkey -r "^u"
