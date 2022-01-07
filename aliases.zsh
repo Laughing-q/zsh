@@ -1,7 +1,7 @@
 alias nv="nvim"
 alias ra="ranger"
-alias f="lfimg"
 # alias f="lf"
+alias f="lfimg"
 alias p="pwd"
 alias c="clear"
 alias nf="neofetch"
@@ -18,5 +18,58 @@ alias tre="tmux rename-session -t"
 # lazygit
 alias gg="lazygit"
 
+# youtobe-dl
+alias \
+  yl="youtube-dl -ic --add-metadata --proxy 127.0.0.1:7890" \
+  ylx="youtube-dl -xic --audio-format mp3 --proxy 127.0.0.1:7890"
+  # ylx="youtube-dl -xic --audio-format mp3 --add-metadata --proxy 127.0.0.1:7890"
+
+# curl
+alias curl="curl --proxy 127.0.0.1:7890"
+
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
 # watch gpu
 alias wa="watch -n 1 nvidia-smi"
+
+# ls
+alias ll='ls -lh'
+
+# path
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
+# git
+alias gl='git pull'
+alias gp='git push'
+
+# grep
+grep-flags-available() {
+    command grep "$@" "" &>/dev/null <<< ""
+}
+
+# Ignore these folders (if the necessary grep flags are available)
+EXC_FOLDERS="{.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
+
+# Check for --exclude-dir, otherwise check for --exclude. If --exclude
+# isn't available, --color won't be either (they were released at the same
+# time (v2.5): https://git.savannah.gnu.org/cgit/grep.git/tree/NEWS?id=1236f007
+if grep-flags-available --color=auto --exclude-dir=.cvs; then
+    GREP_OPTIONS="--color=auto --exclude-dir=$EXC_FOLDERS"
+elif grep-flags-available --color=auto --exclude=.cvs; then
+    GREP_OPTIONS="--color=auto --exclude=$EXC_FOLDERS"
+fi
+
+if [[ -n "$GREP_OPTIONS" ]]; then
+    # export grep, egrep and fgrep settings
+    alias grep="grep $GREP_OPTIONS"
+    alias egrep="egrep $GREP_OPTIONS"
+    alias fgrep="fgrep $GREP_OPTIONS"
+fi
+
+# Clean up
+unset GREP_OPTIONS EXC_FOLDERS
+unfunction grep-flags-available
