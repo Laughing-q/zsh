@@ -7,6 +7,8 @@ setopt interactive_comments
 # setopt appendhistory
 
 HISTFILE=~/.zsh_history
+HISTSIZE=10000000
+SAVEHIST=10000000
 
 # completions
 autoload -U compinit
@@ -32,15 +34,19 @@ unset CASE_SENSITIVE HYPHEN_INSENSITIVE
 source "$ZDOTDIR/functions.zsh"
 
 # Normal files to source
-zsh_add_file "aliases.zsh"
 zsh_add_file "keybindings.zsh"
+zsh_add_file "aliases.zsh"
 zsh_add_file "prompt.zsh"
+zsh_add_file "env.zsh"
 
-# fzf, install first.
+# fzf and fd(more faster `find`), install first.
+zsh_add_file "fzf/custom.zsh"
 zsh_add_file "fzf/key-bindings.zsh"
 zsh_add_file "fzf/completion.zsh"
+# zsh_add_file "fzf/functions.zsh"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 
 # Change cursor shape for different vi modes.

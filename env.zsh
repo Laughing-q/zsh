@@ -23,9 +23,13 @@ eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
 
 export PATH=$PATH:/home/laughing/.local/bin
 export TERMINFO=/usr/share/terminfo
-#
-#
+
+
 # systemctl start runsunloginclient.service
+
+# fzf setting
+# export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up --border --preview='$ZDOTDIR/fzf/preview.sh {}'"
+export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up"
 
 # proxy
 export ALL_PROXY=socks5://127.0.0.1:7890
