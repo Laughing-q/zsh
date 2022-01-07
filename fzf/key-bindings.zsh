@@ -114,6 +114,10 @@ zle     -N   fzf-history-widget
 fj(){
   local dir
   dir=$(awk '{print $2}' "$HOME/.local/share/autojump/autojump.txt" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  if [[ -z "$dir" ]]; then
+    zle redisplay
+    return 0
+  fi
   BUFFER="cd -- ${(q)dir}"
   zle accept-line
 }
