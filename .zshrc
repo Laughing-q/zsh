@@ -37,7 +37,6 @@
  zsh_add_file "prompt.zsh"
  zsh_add_file "env.zsh"
 
-
  # fzf and fd(more faster `find`), install first.
  zsh_add_file "fzf/custom.zsh"
  zsh_add_file "fzf/key-bindings.zsh"
