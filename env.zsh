@@ -7,7 +7,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
 
 # export PATH="/home/laughing/anaconda3/bin:$PATH"
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/laughing/TensorRT-7.1.3.4/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/laughing/TensorRT-8.2.2.1/lib
 
 # source /opt/anaconda/bin/activate root
 eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
@@ -23,6 +23,10 @@ eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
 
 export PATH=$PATH:/home/laughing/.local/bin
 export TERMINFO=/usr/share/terminfo
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
+export PATH=$PATH:/opt/cuda/bin
+
 
 
 # systemctl start runsunloginclient.service
