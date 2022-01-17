@@ -20,7 +20,7 @@ export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up"
 
 source /home/laughing/anaconda3/bin/activate root
 eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
-xmodmap ~/.config/zsh/.xmodmap
+# xmodmap ~/.config/zsh/.xmodmap
 
 # proxy
 # export ALL_PROXY=socks5://127.0.0.1:7890

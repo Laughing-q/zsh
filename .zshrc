@@ -49,6 +49,7 @@ zsh_add_plugin "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 
+# source "/home/laughing/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh"
 # Change cursor shape for different vi modes.
 function zle-keymap-select () {
     case $KEYMAP in
