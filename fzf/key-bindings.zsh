@@ -123,7 +123,20 @@ fj(){
 }
 zle     -N   fj
 
+fo(){
+  local file
+  file=$(fd --type=file -H | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  if [[ ! (-f "$file") ]]; then
+    zle redisplay
+    return 0
+  fi
+  BUFFER="nvim ${file}"
+  zle accept-line
+}
+zle     -N   fo
+
 bindkey '^T' fzf-file-widget 
 bindkey '^R' fzf-history-widget
 # bindkey '^F' fzf-cd-widget
 bindkey '^F' fj
+bindkey '^O' fo

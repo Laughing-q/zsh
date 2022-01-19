@@ -21,7 +21,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/laughing/TensorRT-8.2.2.1/lib
 # export XMODIFIERS=@im=ibus
 # export QT_IM_MODULE=ibus
 
-export PATH=$PATH:/home/laughing/.local/bin
+export PATH=$PATH:/home/laughing/.local/bin:/usr/local/bin
 export TERMINFO=/usr/share/terminfo
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
