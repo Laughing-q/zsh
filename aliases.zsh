@@ -1,10 +1,14 @@
-alias nv="nvim"
 alias ra="ranger"
+alias e="$EDITOR"
+alias v="$EDITOR"
+alias z="zathura"
 # alias f="lf"
 alias f="lfimg"
 alias p="pwd"
 alias c="clear"
 alias nf="neofetch"
+alias mkdir="mkdir -pv"
+alias rm="rm -vI"
 
 # tmux alias
 alias tn="tmux new -s"
@@ -34,6 +38,7 @@ alias curl="curl --proxy 127.0.0.1:7890"
 alias wa="watch -n 1 nvidia-smi"
 
 # ls
+alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -lh'
 
 # path
@@ -43,6 +48,8 @@ alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
 # git
+alias g='git'
+alias gc='git clone'
 alias gl='git pull'
 alias gp='git push'
 
