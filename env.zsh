@@ -25,6 +25,8 @@ export TERMINFO=/usr/share/terminfo
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
 export PATH=$PATH:/opt/cuda/bin
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+# export PATH=$PATH:/usr/local/cuda/bin
 
 
 
@@ -33,6 +35,7 @@ export PATH=$PATH:/opt/cuda/bin
 # fzf setting
 # export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up --border --preview='$ZDOTDIR/fzf/preview.sh {}'"
 export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # proxy
 export ALL_PROXY=socks5://127.0.0.1:7890
