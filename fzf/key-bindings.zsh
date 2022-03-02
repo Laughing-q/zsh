@@ -123,6 +123,18 @@ fj(){
 }
 zle     -N   fj
 
+flf(){
+  local dir
+  dir=$(awk '{print $2}' "$HOME/.local/share/autojump/autojump.txt" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  if [[ -z "$dir" ]]; then
+    zle redisplay
+    return 0
+  fi
+  BUFFER="f ${(q)dir}"
+  zle accept-line
+}
+zle     -N   flf
+
 fo(){
   local file
   file=$(fd --type=file -H -E ".git/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
@@ -139,4 +151,5 @@ bindkey '^T' fzf-file-widget
 bindkey '^R' fzf-history-widget
 # bindkey '^F' fzf-cd-widget
 bindkey '^F' fj
+bindkey '^G' flf
 bindkey '^O' fo
