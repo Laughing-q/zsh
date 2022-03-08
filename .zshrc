@@ -57,6 +57,7 @@ zsh_add_file "fzf/completion.zsh"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# ZSH_AUTOSUGGEST_HISTORY_IGNORE="cd *"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 
 # Change cursor shape for different vi modes.
