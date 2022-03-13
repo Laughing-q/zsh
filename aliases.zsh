@@ -9,6 +9,7 @@ alias p="pwd"
 alias nf="neofetch"
 alias mkdir="mkdir -pv"
 alias rm="rm -vI"
+alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
 
 # tmux alias
 alias tn="tmux new -s"
