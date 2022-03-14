@@ -47,7 +47,7 @@ source "$ZDOTDIR/functions.zsh"
 zsh_add_file "keybindings.zsh"
 zsh_add_file "aliases.zsh"
 zsh_add_file "prompt.zsh"
-zsh_add_file "env.zsh"
+# zsh_add_file "env.zsh"
 
 # fzf and fd(more faster `find`), install first.
 zsh_add_file "fzf/custom.zsh"
