@@ -6,7 +6,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.2.2.1/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.4.1.5/lib
 
 # source /opt/anaconda/bin/activate root
 # eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
@@ -25,11 +25,11 @@ export TERMINFO=/usr/share/terminfo
 
 # export CUDA_PATH=/opt/cuda
 # export PATH=$PATH:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
-# export PATH=$PATH:/opt/cuda/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
-export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
+export PATH=$PATH:/opt/cuda/bin
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
+# export PATH=$PATH:/usr/local/cuda/bin
 
 
 
