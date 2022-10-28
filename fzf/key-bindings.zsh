@@ -137,7 +137,7 @@ zle     -N   flf
 
 fo(){
   local file
-  file=$(fd --type=file -H -E ".git/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  file=$(fd --type=file -H -E ".git/*" -E ".github/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
   if [[ ! (-f "$file") ]]; then
     zle redisplay
     return 0
@@ -147,9 +147,22 @@ fo(){
 }
 zle     -N   fo
 
+ff(){
+  local file
+  file=$(fd --type=file -I -H -E ".git/*" -E ".github/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  if [[ ! (-f "$file") ]]; then
+    zle redisplay
+    return 0
+  fi
+  BUFFER="f ${file}"
+  zle accept-line
+}
+zle     -N   ff
+
 bindkey '^T' fzf-file-widget 
 bindkey '^R' fzf-history-widget
 # bindkey '^F' fzf-cd-widget
 bindkey '^F' fj
 bindkey '^G' flf
 bindkey '^O' fo
+bindkey '^B' ff
