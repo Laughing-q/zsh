@@ -149,11 +149,11 @@ zle     -N   fo
 
 ff(){
   local file
-  file=$(fd --type=file -I -H -E ".git/*" -E ".github/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
-  if [[ ! (-f "$file") ]]; then
-    zle redisplay
-    return 0
-  fi
+  file=$(fd --type=file --type=directory -I -H -E ".git/*" -E ".github/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  # if [[ ! (-f "$file") ]]; then
+  #   zle redisplay
+  #   return 0
+  # fi
   BUFFER="f ${file}"
   zle accept-line
 }
