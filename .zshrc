@@ -75,5 +75,6 @@ zle-line-init() {
 zle -N zle-line-init
 
 source /opt/anaconda/bin/activate root
+zsh_add_file "prompt.zsh"
 # autojump, install first.
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh

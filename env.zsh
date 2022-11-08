@@ -155,3 +155,6 @@ ex=🎯:\
 # "
 
 # export https_proxy=https://127.0.0.1:7890
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"

@@ -54,7 +54,7 @@ function git_prompt_info() {
 
 setopt prompt_subst
 
-PROMPT="%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜ )"
+PROMPT="(base) %(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜ )"
 PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 # PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} '
 
