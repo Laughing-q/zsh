@@ -139,7 +139,7 @@ zle     -N   flf
 
 fo(){
   local file
-  file=$(fd --type=file -H -E ".git/*" -E ".github/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  file=$(fd --type=file -H -I -E ".git/*" -E ".github/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
   if [[ ! (-f "$file") ]]; then
     zle redisplay
     return 0
