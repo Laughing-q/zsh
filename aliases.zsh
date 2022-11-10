@@ -19,6 +19,8 @@ alias sdr="sudo docker run"
 alias sde="sudo docker exec"
 alias sdc="sudo docker cp"
 
+alias cdp="conda activate"
+
 # tmux alias
 alias tn="tmux new -s"
 alias tl="tmux ls"
