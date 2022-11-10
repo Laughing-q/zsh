@@ -54,11 +54,9 @@ function git_prompt_info() {
 
 setopt prompt_subst
 
-PROMPT="(base) %(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜ )"
+PROMPT="%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜ )"
 PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 # PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} '
-
-RPROMPT='%{$fg[gray]%}%*%{$reset_color%}'
 
 # ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[green]%}"

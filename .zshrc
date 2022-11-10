@@ -53,6 +53,7 @@ zsh_add_file "prompt.zsh"
 zsh_add_file "fzf/custom.zsh"
 zsh_add_file "fzf/key-bindings.zsh"
 zsh_add_file "fzf/completion.zsh"
+zsh_add_file "prompt.zsh"
 # zsh_add_file "fzf/functions.zsh"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
@@ -74,7 +75,7 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-source /opt/anaconda/bin/activate root
-zsh_add_file "prompt.zsh"
+# source /opt/anaconda/bin/activate root
+[ -f /opt/anaconda/etc/profile.d/conda.sh ] && source /opt/anaconda/etc/profile.d/conda.sh
 # autojump, install first.
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
