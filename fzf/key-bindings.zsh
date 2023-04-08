@@ -164,7 +164,7 @@ zle     -N   ff
 bindkey '^T' fzf-file-widget 
 bindkey '^R' fzf-history-widget
 # bindkey '^F' fzf-cd-widget
-bindkey '^F' fj
+bindkey '^k' fj
 bindkey '^G' flf
 bindkey '^O' fo
 bindkey '^B' ff

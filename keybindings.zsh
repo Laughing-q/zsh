@@ -6,6 +6,7 @@
 bindkey -M vicmd "h" vi-insert
 bindkey -M vicmd "H" vi-insert-bol
 bindkey -M vicmd "j" vi-backward-char
+bindkey -M visual "j" vi-backward-char
 bindkey -M vicmd "l" vi-forward-char
 bindkey -M vicmd "J" vi-beginning-of-line
 bindkey -M vicmd "L" vi-end-of-line
@@ -19,12 +20,16 @@ bindkey "^E" end-of-line
 # bindkey -r "^u"
 bindkey "^P" up-history
 bindkey "^N" down-history
+bindkey '^s' forward-word
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^k' edit-command-line
-bindkey '^s' forward-word
+bindkey -M vicmd '^k' edit-command-line
+# bindkey '^k' edit-command-line
 
+# `-s` will not work if remap `^j`
+bindkey -s '^f' '^uf\n'
+bindkey -s '^a' '^ubc -lq\n'
 
 # fzf
 # bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
