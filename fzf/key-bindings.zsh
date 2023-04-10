@@ -165,6 +165,6 @@ bindkey '^T' fzf-file-widget
 bindkey '^R' fzf-history-widget
 # bindkey '^F' fzf-cd-widget
 bindkey '^k' fj
-bindkey '^G' flf
+# bindkey '^G' flf
 bindkey '^O' fo
 bindkey '^B' ff

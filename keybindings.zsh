@@ -37,7 +37,8 @@ lfcd () {
     fi
 }
 # `-s` will not work if remap `^j`
-bindkey -s '^f' '^ulfcd\n'
+bindkey -s '^f' '^ulfimg\n'
+bindkey -s '^g' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
 
 # fzf
