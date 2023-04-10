@@ -53,6 +53,7 @@ zsh_add_file "prompt.zsh"
 zsh_add_file "fzf/custom.zsh"
 zsh_add_file "fzf/key-bindings.zsh"
 zsh_add_file "fzf/completion.zsh"
+zsh_add_file "prompt.zsh"
 # zsh_add_file "fzf/functions.zsh"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
