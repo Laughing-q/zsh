@@ -36,7 +36,6 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^o' '^ulfcd\n'
 # `-s` will not work if remap `^j`
 bindkey -s '^f' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
