@@ -3,7 +3,8 @@ alias e="$EDITOR"
 alias v="$EDITOR"
 alias z="zathura"
 # alias f="lf"
-alias f="lfimg"
+# alias f="lfimg"
+alias f="ranger"
 alias p="pwd"
 # alias c="clear"
 alias nf="neofetch"
@@ -38,7 +39,7 @@ alias \
   # ylx="youtube-dl -xic --audio-format mp3 --add-metadata --proxy 127.0.0.1:7890"
 
 # curl
-alias curl="curl --proxy 127.0.0.1:7890"
+# alias curl="curl --proxy 172.16.11.2:7890"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"

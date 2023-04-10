@@ -6,7 +6,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.2.2.1/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.4.1.5/lib
 
 # source /opt/anaconda/bin/activate root
 # eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
@@ -28,7 +28,7 @@ export TERMINFO=/usr/share/terminfo
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
 # export PATH=$PATH:/opt/cuda/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 export PATH=$PATH:/usr/local/cuda/bin
 
 
@@ -41,8 +41,9 @@ export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # proxy
-export ALL_PROXY=socks5://127.0.0.1:7890
-# export http_proxy=http://127.0.0.1:7890
+# export ALL_PROXY=socks5://172.16.11.2:7890
+# export http_proxy=http://172.16.11.33:7892
+# export https_proxy=https://172.16.11.33:7892
 export LF_ICONS="di=📁:\
 fi=📃:\
 tw=🤝:\
