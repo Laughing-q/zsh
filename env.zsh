@@ -6,7 +6,8 @@ export ZDOTDIR="$HOME/.config/zsh"
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.4.1.5/lib
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.4.1.5/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.5.3.1/lib
 
 # source /opt/anaconda/bin/activate root
 # eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
