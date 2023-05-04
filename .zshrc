@@ -75,7 +75,7 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-# source /opt/anaconda/bin/activate root
-[ -f /opt/anaconda/etc/profile.d/conda.sh ] && source /opt/anaconda/etc/profile.d/conda.sh
+# source $HOME/anaconda3/bin/activate root
+[ -f $HOME/anaconda3/etc/profile.d/conda.sh ] && source $HOME/anaconda3/etc/profile.d/conda.sh
 # autojump, install first.
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
