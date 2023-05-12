@@ -38,8 +38,9 @@ lfcd () {
 }
 # `-s` will not work if remap `^j`
 bindkey -s '^f' '^ulfimg\n'
-bindkey -s '^g' '^ulfcd\n'
+# bindkey -s '^g' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
+bindkey -s '^g' '^utmux-sessionizer\n'
 
 # fzf
 # bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'

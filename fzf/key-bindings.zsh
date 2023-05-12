@@ -114,7 +114,10 @@ zle     -N   fzf-history-widget
 fj(){
   local dir
   # dir=$(awk '{print $2}' "$HOME/.local/share/autojump/autojump.txt" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
-  dir=$(cat "$HOME/.local/share/autojump/autojump.txt" | sort -n | awk '{print $2}' | tac | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  dir=$(cat "$HOME/.local/share/autojump/autojump.txt" | sort -n | awk '{print $2}' | tac | \
+    fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore\
+    --prompt "Jump to: "
+  )
   if [[ -z "$dir" ]]; then
     zle redisplay
     return 0
@@ -140,7 +143,10 @@ zle     -N   flf
 fo(){
   local file
   # file=$(fd --type=file -H -I -E ".git/*" -E ".github/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
-  file=$(fd --type=file -H -E ".git/*" -E ".github/*" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  file=$(fd --type=file -H -E ".git/*" -E ".github/*" | \
+    fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore\
+    --prompt "Open file: "
+  )
   if [[ ! (-f "$file") ]]; then
     zle redisplay
     return 0
@@ -162,10 +168,10 @@ ff(){
 }
 zle     -N   ff
 
-bindkey '^T' fzf-file-widget 
+# bindkey '^T' fzf-file-widget 
 bindkey '^R' fzf-history-widget
 # bindkey '^F' fzf-cd-widget
 bindkey '^k' fj
 # bindkey '^G' flf
 bindkey '^O' fo
-bindkey '^B' ff
+# bindkey '^B' ff
