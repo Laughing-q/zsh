@@ -19,7 +19,12 @@ alias sdr="sudo docker run"
 alias sde="sudo docker exec"
 alias sdc="sudo docker cp"
 
+# conda env
 alias cdp="conda activate"
+
+# notify-send
+alias ns="notify-send"
+alias nsd="notify-send Done!"
 
 # tmux alias
 alias tn="tmux new -s"
