@@ -115,6 +115,7 @@ ex=🎯:\
 *.1=ℹ:\
 *.nfo=ℹ:\
 *.info=ℹ:\
+*.json=🌵:\
 *.log=📙:\
 *.iso=📀:\
 *.img=📀:\
@@ -137,6 +138,9 @@ ex=🎯:\
 *.engine=🏠:\
 *.om=🏠:\
 *.bmodel=🏠:\
+*.bin=🏠:\
+*.param=ℹ:\
+*.encrypted=🍊:\
 "
 
 # export LF_COLORS="\
