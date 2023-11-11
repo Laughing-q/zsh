@@ -1,5 +1,5 @@
 export EDITOR=nvim
-export BROWSER=google-chrome-stable
+export BROWSER=brave
 export TERMINAL="st"
 export ZDOTDIR="$HOME/.config/zsh"
 
@@ -26,11 +26,11 @@ export TERMINFO=/usr/share/terminfo
 
 # export CUDA_PATH=/opt/cuda
 # export PATH=$PATH:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
-export PATH=$PATH:/opt/cuda/bin
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
+# export PATH=$PATH:/opt/cuda/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
-# export PATH=$PATH:/usr/local/cuda/bin
+export PATH=$PATH:/usr/local/cuda/bin
 
 
 
