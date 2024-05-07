@@ -30,14 +30,14 @@ bindkey -M vicmd '^k' edit-command-line
 lfcd () {
     tmp="$(mktemp -uq)"
     trap 'rm -f $tmp >/dev/null 2>&1 && trap - HUP INT QUIT TERM PWR EXIT' HUP INT QUIT TERM PWR EXIT
-    lfimg -last-dir-path="$tmp" "$@"
+    lf -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
 # `-s` will not work if remap `^j`
-bindkey -s '^f' '^ulfimg\n'
+bindkey -s '^f' '^ulf\n'
 # bindkey -s '^g' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
 bindkey -s '^g' '^utmux-sessionizer\n'
