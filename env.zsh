@@ -6,9 +6,8 @@ export ZDOTDIR="$HOME/.config/zsh"
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
 
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.4.1.5/lib
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.5.3.1/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.6.1.6/lib
+TENSORRT_PATH="$HOME/TensorRT-8.6.1.6"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TENSORRT_PATH/lib
 
 # source /opt/anaconda/bin/activate root
 # eval "$(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)"
@@ -22,7 +21,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/TensorRT-8.6.1.6/lib
 # export XMODIFIERS=@im=ibus
 # export QT_IM_MODULE=ibus
 
-export PATH=$PATH:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:$TENSORRT_PATH/bin
 export TERMINFO=/usr/share/terminfo
 
 # export CUDA_PATH=/opt/cuda
