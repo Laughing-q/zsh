@@ -6,7 +6,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
 
-TENSORRT_PATH="$HOME/TensorRT-8.6.1.6"
+TENSORRT_PATH="$HOME/TensorRT-10.2.0.19"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TENSORRT_PATH/lib
 
 # source /opt/anaconda/bin/activate root
