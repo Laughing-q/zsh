@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER=brave
 export TERMINAL="st"
 export ZDOTDIR="$HOME/.config/zsh"
