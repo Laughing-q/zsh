@@ -13,6 +13,12 @@ bindkey -M vicmd "L" vi-end-of-line
 bindkey -M vicmd "k" down-line-or-history
 bindkey -M vicmd "i" up-line-or-history
 
+# zsh menuselect with vim keys
+bindkey -M menuselect 'j' vi-backward-char
+bindkey -M menuselect 'i' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'k' vi-down-line-or-history
+
 VI_MODE_SET_CURSOR=true
 
 # base
