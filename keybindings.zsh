@@ -19,6 +19,14 @@ bindkey -M menuselect 'i' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'k' vi-down-line-or-history
 
+autoload -Uz surround   # surround
+zle -N delete-surround surround
+zle -N add-surround surround
+zle -N change-surround surround
+bindkey -M vicmd cs change-surround
+bindkey -M vicmd ds delete-surround
+bindkey -M visual S add-surround
+
 VI_MODE_SET_CURSOR=true
 
 # base
