@@ -114,10 +114,8 @@ zle     -N   fzf-history-widget
 fj(){
   local dir
   # dir=$(awk '{print $2}' "$HOME/.local/share/autojump/autojump.txt" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
-  dir=$(cat "$HOME/.local/share/autojump/autojump.txt" | sort -n | awk '{print $2}' | tac | \
-    fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore\
-    --prompt "Jump to: "
-  )
+  # dir=$(cat "$HOME/.local/share/autojump/autojump.txt" | sort -n | awk '{print $2}' | tac | \
+  dir=$(zoxide query -l | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore --prompt "Jump to: ")
   if [[ -z "$dir" ]]; then
     zle redisplay
     return 0
@@ -130,7 +128,7 @@ zle     -N   fj
 flf(){
   local dir
   # dir=$(awk '{print $2}' "$HOME/.local/share/autojump/autojump.txt" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
-  dir=$(cat "$HOME/.local/share/autojump/autojump.txt" | sort -n | awk '{print $2}' | tac | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
+  dir=$(zoxide query -l | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
   if [[ -z "$dir" ]]; then
     zle redisplay
     return 0
