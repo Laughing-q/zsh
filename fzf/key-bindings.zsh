@@ -116,9 +116,9 @@ fj(){
   # dir=$(awk '{print $2}' "$HOME/.local/share/autojump/autojump.txt" | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore)
   # dir=$(cat "$HOME/.local/share/autojump/autojump.txt" | sort -n | awk '{print $2}' | tac | \
   dir=$(zoxide query -l | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore --prompt "Jump to: ")
+  zoxide add "$dir"  # add zoxide score
   if [[ -z "$dir" ]]; then
     zle redisplay
-    zoxide add "$dir"
     return 0
   fi
   BUFFER="cd -- ${(q)dir}"
