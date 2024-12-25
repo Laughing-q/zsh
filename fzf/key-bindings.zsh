@@ -118,6 +118,7 @@ fj(){
   dir=$(zoxide query -l | fzf --height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore --prompt "Jump to: ")
   if [[ -z "$dir" ]]; then
     zle redisplay
+    zoxide add "$dir"
     return 0
   fi
   BUFFER="cd -- ${(q)dir}"
