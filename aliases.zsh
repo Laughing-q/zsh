@@ -1,7 +1,7 @@
 alias ra="ranger"
 alias e="$EDITOR"
 alias v="$EDITOR"
-alias z="zathura"
+# alias z="zathura"
 alias f="lf"
 # alias f="lfimg"
 alias p="pwd"
