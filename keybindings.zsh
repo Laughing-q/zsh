@@ -51,7 +51,7 @@ lfcd () {
     fi
 }
 # `-s` will not work if remap `^j`
-bindkey -s '^f' '^ulf\n'
+bindkey -s '^f' '^uyazi\n'
 # bindkey -s '^g' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
 bindkey -s '^g' '^utmux-sessionizer\n'
