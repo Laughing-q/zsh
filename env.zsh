@@ -29,7 +29,6 @@ export TERMINFO=/usr/share/terminfo
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
 # export PATH=$PATH:/opt/cuda/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 export PATH=$PATH:/usr/local/cuda/bin
 
 
