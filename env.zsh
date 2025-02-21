@@ -24,8 +24,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TENSORRT_PATH/lib
 export PATH=$PATH:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:$TENSORRT_PATH/bin
 export TERMINFO=/usr/share/terminfo
 
-# export CUDA_PATH=/opt/cuda
-# export PATH=$PATH:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
 # export PATH=$PATH:/opt/cuda/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
