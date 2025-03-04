@@ -39,10 +39,10 @@ export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # proxy
-# export ALL_PROXY=socks5://127.0.0.1:7890
-export ALL_PROXY=http://127.0.0.1:7890
-# export http_proxy=http://127.0.0.1:7890
-# export https_proxy=https://127.0.0.1:7890
+# export ALL_PROXY=socks5://127.0.0.1:7891
+# export ALL_PROXY=http://127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7892
+export https_proxy=https://127.0.0.1:7892
 export LF_ICONS="di=📁:\
 fi=📃:\
 tw=🤝:\
