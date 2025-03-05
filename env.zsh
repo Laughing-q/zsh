@@ -36,6 +36,7 @@ export PATH=$PATH:/usr/local/cuda/bin
 # fzf setting
 # export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up --border --preview='$ZDOTDIR/fzf/preview.sh {}'"
 export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up"
+export _ZO_FZF_OPTS="--bind=ctrl-k:down,ctrl-i:up"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # proxy
