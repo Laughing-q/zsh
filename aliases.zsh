@@ -45,7 +45,11 @@ alias \
   # ylx="youtube-dl -xic --audio-format mp3 --add-metadata --proxy 127.0.0.1:7890"
 
 # curl
-alias curl="curl --proxy 127.0.0.1:7890"
+alias curl="curl --proxy 127.0.0.1:7892"
+
+# proxy
+alias noproxy="unset http_proxy https_proxy"
+alias setproxy="export http_proxy=http://127.0.0.1:7892 https_proxy=https://127.0.0.1:7892"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
