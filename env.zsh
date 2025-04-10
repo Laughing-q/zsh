@@ -45,7 +45,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # This way, it needs to add http/https proxy in .gitconfig accordingly
 export http_proxy=http://127.0.0.1:7892
-export https_proxy=https://127.0.0.1:7892
+# export https_proxy=https://127.0.0.1:7892
 export LF_ICONS="di=📁:\
 fi=📃:\
 tw=🤝:\
