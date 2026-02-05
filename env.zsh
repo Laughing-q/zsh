@@ -24,12 +24,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TENSORRT_PATH/lib
 export PATH=$PATH:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:$TENSORRT_PATH/bin
 export TERMINFO=/usr/share/terminfo
 
-# export CUDA_PATH=/opt/cuda
-# export PATH=$PATH:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
 # export PATH=$PATH:/opt/cuda/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 export PATH=$PATH:/usr/local/cuda/bin
 
 
@@ -39,6 +36,7 @@ export PATH=$PATH:/usr/local/cuda/bin
 # fzf setting
 # export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up --border --preview='$ZDOTDIR/fzf/preview.sh {}'"
 export FZF_DEFAULT_OPTS="--bind=ctrl-k:down,ctrl-i:up"
+export _ZO_FZF_OPTS="--bind=ctrl-k:down,ctrl-i:up"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # proxy
@@ -53,10 +51,10 @@ ow=📂:\
 ln=⛓:\
 or=❌:\
 ex=🎯:\
-*.txt=✍:\
-*.mom=✍:\
-*.me=✍:\
-*.ms=✍:\
+*.txt=📃:\
+*.mom=📃:\
+*.me=📃:\
+*.ms=📃:\
 *.png=🖼:\
 *.webp=🖼:\
 *.ico=🖼:\

@@ -79,3 +79,5 @@ zle -N zle-line-init
 [ -f $HOME/anaconda3/etc/profile.d/conda.sh ] && source $HOME/anaconda3/etc/profile.d/conda.sh
 # autojump, install first.
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+eval "$(zoxide init zsh)"

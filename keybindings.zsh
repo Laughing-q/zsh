@@ -13,6 +13,20 @@ bindkey -M vicmd "L" vi-end-of-line
 bindkey -M vicmd "k" down-line-or-history
 bindkey -M vicmd "i" up-line-or-history
 
+# zsh menuselect with vim keys
+bindkey -M menuselect 'j' vi-backward-char
+bindkey -M menuselect 'i' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'k' vi-down-line-or-history
+
+autoload -Uz surround   # surround
+zle -N delete-surround surround
+zle -N add-surround surround
+zle -N change-surround surround
+bindkey -M vicmd cs change-surround
+bindkey -M vicmd ds delete-surround
+bindkey -M visual S add-surround
+
 VI_MODE_SET_CURSOR=true
 
 # base
@@ -37,7 +51,7 @@ lfcd () {
     fi
 }
 # `-s` will not work if remap `^j`
-bindkey -s '^f' '^ulf\n'
+bindkey -s '^f' '^uyazi\n'
 # bindkey -s '^g' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
 bindkey -s '^g' '^utmux-sessionizer\n'
