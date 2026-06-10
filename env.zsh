@@ -6,7 +6,8 @@ export ZDOTDIR="$HOME/.config/zsh"
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc" 
 
-TENSORRT_PATH="$HOME/TensorRT-10.2.0.19"
+TENSORRT_PATH="$HOME/TensorRT-10.11.0.33"
+export KIMI_CODE_HOME="$HOME/.config/kimi-code"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TENSORRT_PATH/lib
 
 # source /opt/anaconda/bin/activate root
@@ -21,7 +22,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TENSORRT_PATH/lib
 # export XMODIFIERS=@im=ibus
 # export QT_IM_MODULE=ibus
 
-export PATH=$PATH:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:$TENSORRT_PATH/bin
+export PATH=$PATH:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:$TENSORRT_PATH/bin:$HOME/.kimi-code/bin
 export TERMINFO=/usr/share/terminfo
 
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
