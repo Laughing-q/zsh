@@ -22,7 +22,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TENSORRT_PATH/lib
 # export XMODIFIERS=@im=ibus
 # export QT_IM_MODULE=ibus
 
-export PATH=$PATH:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:$TENSORRT_PATH/bin:$HOME/.kimi-code/bin
+export PATH=$PATH:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin:$TENSORRT_PATH/bin:$HOME/.config/kimi-code/bin
 export TERMINFO=/usr/share/terminfo
 
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
